@@ -15,7 +15,11 @@ use App\Models\Students;
 */
 
 Route::get('/', function () {
-    return view("welcome");
+    return view("project");
+});
+Route::get('/{lang}', function ($lang) {
+	App::setlocale($lang);
+	return view("project");
 });
 Route::get('/insert', function () {
     DB::insert('insert into posts(Name, Date_of_birth, GPA, advisor) values(?,?,?)',["Kuyanish","21-02-2002",3.5,"Marzhan Bekbalovna"]);
