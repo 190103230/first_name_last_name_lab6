@@ -25,6 +25,15 @@ Route::get('/insert', function () {
     DB::insert('insert into posts(Name, Date_of_birth, GPA, advisor) values(?,?,?)',["Kuyanish","21-02-2002",3.5,"Marzhan Bekbalovna"]);
 });
 
+Route::get('mail/send', 'MailController@send');
+
+Route::get('/uploadfile','UploadController@index');
+Route::post('/uploadfile','UploadController@showUploadFile');
+
+Route::get('/multiuploads', 'UploadFileController@uploadForm');
+Route::post('/multiuploads', 'UploadFileController@uploadSubmit');
+
+
 Route::get('/select', function () {
    // return view("welcome");
     $students=DB::select('select * from posts where id=?');

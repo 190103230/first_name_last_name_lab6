@@ -8,6 +8,8 @@
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
 		integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
+		
+
 	<script src="https://api-maps.yandex.ru/2.1/?apikey=Your API key&lang=en_US" type="text/javascript">
 	</script>
 
@@ -368,7 +370,16 @@
 					<span>{{__("Browse")}}</span>
 				</a></p>
 		</div>
-
+		<div style="margin-left: 550px; color: grey; margin-top: 10px;">
+		<?php
+		
+         echo Form::open(array('url' => '/uploadfile','files'=>'true'));
+         echo 'Select the file to upload.    '; 
+         echo Form::file('image'); 
+         echo Form::submit('Upload File');
+         echo Form::close();
+      ?>
+</div >
 
 	</div>
 	<div class="latests">

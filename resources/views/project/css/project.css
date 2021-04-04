@@ -1,5 +1,6 @@
 html,
 body,
+
 #map {
 	width: 100%;
 	height: 100%;
@@ -10,7 +11,10 @@ body {
 	margin: 0px;
 	padding: 0px;
 }
-
+.form_on{
+	margin-left: 600px;
+	font-size: 30px; 
+}
 .navi {
 	display: flex;
 	justify-content: space-around;
